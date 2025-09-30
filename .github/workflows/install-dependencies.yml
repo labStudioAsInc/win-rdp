@@ -1,0 +1,13 @@
+name: Install Dependencies
+
+on:
+  workflow_call:
+
+jobs:
+  install:
+    runs-on: windows-latest
+    steps:
+      - name: Install ngrok
+        run: winget install ngrok/ngrok
+      - name: Install cloudflared
+        run: winget install --id Cloudflare.cloudflared
